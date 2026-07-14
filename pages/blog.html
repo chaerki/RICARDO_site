@@ -3,83 +3,183 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog | Ricardo Wiltgen - Podologia</title>
+    <title>Blog – Saúde dos Pés | Ricardo Wiltgen - Podologia Avançada</title>
+    <meta name="description" content="Artigos, orientações e dicas sobre saúde dos pés. Temas como pé diabético, unha encravada, calosidades e cuidados preventivos. Ricardo Wiltgen – Gramado/RS." />
     <link rel="icon" type="image/png" href="/assets/imagens/favicon.ico" />
     <link rel="stylesheet" href="/assets/css/estilo.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <!-- Estilos em /assets/css/estilo.css -->
 </head>
 <body>
 
-    <!-- ===== HERO INTERNO ===== -->
-    <section class="hero" style="padding: 40px 0 60px;">
-        <div class="container hero-container" style="grid-template-columns:1fr; text-align:center;">
+    <!-- Header carregado dinamicamente via script.js -->
+
+    <!-- ===== HERO ===== -->
+    <section class="blog-hero">
+        <div class="container blog-hero-container">
+            <!-- Conteúdo -->
             <div class="hero-conteudo">
                 <span class="hero-badge">Blog</span>
-                <h1>Artigos e <span>Orientações</span></h1>
-                <p class="hero-descricao" style="max-width:700px; margin:0 auto;">
-                    Informações para cuidar da saúde dos seus pés com conhecimento e prevenção.
+                <h1>Saúde dos <span>Pés</span></h1>
+                <p class="hero-descricao">
+                    Artigos e orientações para cuidar dos seus pés com conhecimento, prevenção e confiança.
                 </p>
+                <ul class="blog-hero-lista">
+                    <li>
+                        <i data-feather="book-open"></i>
+                        Conteúdo baseado em mais de 20 anos de experiência clínica
+                    </li>
+                    <li>
+                        <i data-feather="check-circle"></i>
+                        Temas como pé diabético, unhas, calosidades e muito mais
+                    </li>
+                    <li>
+                        <i data-feather="shield"></i>
+                        Informação confiável para decisões mais conscientes
+                    </li>
+                </ul>
+                <div class="hero-botoes">
+                    <a href="#artigos" class="btn-primario">Ver artigos</a>
+                    <a href="https://api.whatsapp.com/send?phone=5554999676597&text=" target="_blank" class="btn-secundario">Agendar avaliação</a>
+                </div>
+            </div>
+            <!-- Imagem -->
+            <div class="blog-hero-img">
+                <img src="/assets/imagens/blog-hero.jpg" alt="Artigos sobre saúde dos pés" />
             </div>
         </div>
     </section>
 
-    <!-- ===== LISTA DE ARTIGOS (carregada via JS) ===== -->
-    <section style="padding: 40px 0 80px; background: var(--cor-branco);">
+    <!-- ===== ARTIGOS ===== -->
+    <section class="blog-artigos" id="artigos">
         <div class="container">
-            <div id="lista-artigos" class="blog-grid" style="grid-template-columns: repeat(3, 1fr);">
-                <!-- Os artigos serão carregados aqui via JavaScript -->
-                <p style="grid-column: span 3; text-align:center; color:var(--cor-texto-claro);">
+            <div class="section-header">
+                <span class="section-tag">Conteúdo</span>
+                <h2>Artigos e <span>Orientações</span></h2>
+                <p>Informações práticas para cuidar da saúde dos seus pés no dia a dia.</p>
+            </div>
+
+            <!-- Filtros -->
+            <div class="blog-filtros" role="group" aria-label="Filtrar artigos por categoria">
+                <button class="blog-filtro-btn ativo" data-categoria="todos">Todos</button>
+                <button class="blog-filtro-btn" data-categoria="Pe Diabetico">Pé Diabético</button>
+                <button class="blog-filtro-btn" data-categoria="Unha Encravada">Unha Encravada</button>
+                <button class="blog-filtro-btn" data-categoria="Calosidades">Calosidades</button>
+                <button class="blog-filtro-btn" data-categoria="Prevencao">Prevenção</button>
+            </div>
+
+            <!-- Grade de artigos (carregada via JS) -->
+            <div id="lista-artigos" class="blog-grid">
+                <p style="grid-column: 1 / -1; text-align:center; color:var(--cor-texto-claro); padding: 40px 0;">
                     Carregando artigos...
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- ===== FAQ (Perguntas Frequentes) ===== -->
-    <section class="faq" style="background: var(--cor-off-white); padding: 80px 0;">
+    <!-- ===== NEWSLETTER ===== -->
+    <section class="blog-newsletter">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Dúvidas</span>
-                <h2>Perguntas <span>Frequentes</span></h2>
-                <p>As principais dúvidas sobre podologia e atendimento</p>
-            </div>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <div class="faq-pergunta">Como agendar uma avaliação?</div>
-                    <div class="faq-resposta">O agendamento pode ser realizado diretamente pelo WhatsApp. Durante a avaliação inicial, cada caso é analisado individualmente para definir a melhor abordagem.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-pergunta">O atendimento é apenas para quem está com dor?</div>
-                    <div class="faq-resposta">Não. Muitas alterações podem ser identificadas antes mesmo do surgimento da dor. A avaliação preventiva permite detectar sinais precoces e promover um cuidado mais eficaz.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-pergunta">Com que frequência devo realizar avaliação podológica?</div>
-                    <div class="faq-resposta">A frequência varia conforme as necessidades de cada pessoa. Pacientes com alterações recorrentes, diabetes ou outras condições específicas podem se beneficiar de um acompanhamento periódico.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-pergunta">Ricardo Wiltgen atende casos complexos?</div>
-                    <div class="faq-resposta">Sim. Com mais de 20 anos de experiência em Podologia Avançada, Ricardo atua em casos recorrentes, correções ungueais, alterações persistentes e situações que exigem avaliação técnica mais aprofundada.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-pergunta">Unha encravada sempre precisa de cirurgia?</div>
-                    <div class="faq-resposta">Não. Raramente precisa. Muitos casos podem ser tratados por meio de técnicas podológicas específicas, sem necessidade de procedimentos cirúrgicos. A indicação depende da avaliação individual de cada paciente.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-pergunta">Pessoas com diabetes devem consultar um podólogo?</div>
-                    <div class="faq-resposta">Sim. Pessoas com diabetes possuem maior risco de desenvolver alterações nos pés devido às mudanças na circulação e na sensibilidade. O acompanhamento preventivo é fundamental para preservar a saúde dos pés e reduzir riscos de complicações.</div>
-                </div>
+            <div class="blog-newsletter-inner">
+                <span class="section-tag">Fique por dentro</span>
+                <h2>Receba <span>novos artigos</span></h2>
+                <p>Cadastre seu e-mail e receba orientações sobre saúde dos pés diretamente na sua caixa de entrada.</p>
+                <form class="blog-newsletter-form" onsubmit="return false;">
+                    <input type="email" placeholder="Seu melhor e-mail" aria-label="E-mail para newsletter" />
+                    <button type="submit" class="btn-primario">Cadastrar</button>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- ===== CTA ===== -->
+    <!-- ===== FAQ ===== -->
+    <section class="blog-faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Dúvidas</span>
+                <h2>Perguntas <span>frequentes</span></h2>
+                <p>As principais dúvidas sobre podologia e atendimento</p>
+            </div>
+            <div class="blog-faq-wrapper">
+
+                <!-- FAQ 1 -->
+                <div class="blog-faq-item">
+                    <button class="blog-faq-pergunta" aria-expanded="false">
+                        Como agendar uma avaliação?
+                        <span class="blog-faq-icon" aria-hidden="true"><i data-feather="plus"></i></span>
+                    </button>
+                    <div class="blog-faq-resposta">
+                        O agendamento pode ser realizado diretamente pelo WhatsApp. Durante a avaliação inicial, cada caso é analisado individualmente para definir a melhor abordagem terapêutica.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="blog-faq-item">
+                    <button class="blog-faq-pergunta" aria-expanded="false">
+                        O atendimento é apenas para quem está com dor?
+                        <span class="blog-faq-icon" aria-hidden="true"><i data-feather="plus"></i></span>
+                    </button>
+                    <div class="blog-faq-resposta">
+                        Não. Muitas alterações podem ser identificadas antes mesmo do surgimento da dor. A avaliação preventiva permite detectar sinais precoces e promover um cuidado mais eficaz e com menor custo para a saúde.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="blog-faq-item">
+                    <button class="blog-faq-pergunta" aria-expanded="false">
+                        Com que frequência devo realizar avaliação podológica?
+                        <span class="blog-faq-icon" aria-hidden="true"><i data-feather="plus"></i></span>
+                    </button>
+                    <div class="blog-faq-resposta">
+                        A frequência varia conforme as necessidades de cada pessoa. Pacientes com alterações recorrentes, diabetes ou outras condições específicas podem se beneficiar de um acompanhamento periódico — a cada 1 a 3 meses. Para pessoas sem queixas, uma avaliação anual é recomendada.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="blog-faq-item">
+                    <button class="blog-faq-pergunta" aria-expanded="false">
+                        Ricardo Wiltgen atende casos complexos?
+                        <span class="blog-faq-icon" aria-hidden="true"><i data-feather="plus"></i></span>
+                    </button>
+                    <div class="blog-faq-resposta">
+                        Sim. Com mais de 20 anos de experiência em Podologia Avançada, Ricardo atua em casos recorrentes, correções ungueais, alterações persistentes e situações que exigem avaliação técnica mais aprofundada.
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="blog-faq-item">
+                    <button class="blog-faq-pergunta" aria-expanded="false">
+                        Unha encravada sempre precisa de cirurgia?
+                        <span class="blog-faq-icon" aria-hidden="true"><i data-feather="plus"></i></span>
+                    </button>
+                    <div class="blog-faq-resposta">
+                        Não. Raramente precisa. Muitos casos podem ser tratados por meio de técnicas podológicas específicas, sem necessidade de procedimentos cirúrgicos. A indicação depende da avaliação individual de cada paciente.
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="blog-faq-item">
+                    <button class="blog-faq-pergunta" aria-expanded="false">
+                        Pessoas com diabetes devem consultar um podólogo?
+                        <span class="blog-faq-icon" aria-hidden="true"><i data-feather="plus"></i></span>
+                    </button>
+                    <div class="blog-faq-resposta">
+                        Sim. Pessoas com diabetes possuem maior risco de desenvolver alterações nos pés devido às mudanças na circulação e na sensibilidade. O acompanhamento preventivo é fundamental para preservar a saúde dos pés e reduzir riscos de complicações graves.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA FINAL ===== -->
     <section class="cta-final">
         <div class="container cta-container">
             <div class="cta-conteudo">
                 <h2>Agende sua <span>Avaliação</span></h2>
-                <p>Cuide da saúde dos seus pés com quem tem mais de 20 anos de experiência.</p>
+                <p>Cuide da saúde dos seus pés com quem tem mais de 20 anos de experiência em Podologia Avançada.</p>
                 <a href="https://api.whatsapp.com/send?phone=5554999676597&text=" target="_blank" class="btn-primario">
                     Agendar avaliação pelo WhatsApp
                 </a>
@@ -87,43 +187,92 @@
         </div>
     </section>
 
-    <script>
-        // ===== CARREGA OS ARTIGOS DO JSON =====
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('/components/artigos.json')
-                .then(response => response.json())
-                .then(artigos => {
-                    const container = document.getElementById('lista-artigos');
-                    container.innerHTML = ''; // Limpa o "Carregando..."
+    <!-- Footer carregado dinamicamente via script.js -->
 
-                    artigos.forEach(artigo => {
-                        const card = document.createElement('article');
-                        card.className = 'blog-card';
-                        card.innerHTML = `
-                            <div class="blog-card-conteudo">
-                                <span class="blog-categoria">${artigo.categoria}</span>
-                                <h3>${artigo.titulo}</h3>
-                                <p>${artigo.resumo}</p>
-                                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px;">
-                                    <span style="font-size:0.8rem; color:var(--cor-texto-claro);">${artigo.data}</span>
-                                    <a href="artigo.html?id=${artigo.id}" class="btn-link">Leia mais →</a>
-                                </div>
-                            </div>
-                        `;
-                        container.appendChild(card);
-                    });
-                })
-                .catch(error => {
-                    console.error('Erro ao carregar artigos:', error);
-                    document.getElementById('lista-artigos').innerHTML = `
-                        <p style="grid-column: span 3; text-align:center; color:var(--cor-texto-claro);">
-                            Erro ao carregar artigos. Tente novamente mais tarde.
-                        </p>
-                    `;
-                });
-        });
+    <script>
+        feather.replace();
     </script>
 
     <script src="/assets/js/script.js"></script>
+
+    <!-- ===== ARTIGOS: carregamento + filtro ===== -->
+    <script>
+        var todosArtigos = [];
+
+        function renderArtigos(lista) {
+            var container = document.getElementById('lista-artigos');
+            if (!lista.length) {
+                container.innerHTML = '<p style="grid-column:1/-1; text-align:center; color:var(--cor-texto-claro); padding:40px 0;">Nenhum artigo encontrado nesta categoria.</p>';
+                return;
+            }
+            container.innerHTML = lista.map(function(artigo) {
+                return '<article class="blog-card">' +
+                    '<div class="blog-card-img">' +
+                        (artigo.imagem
+                            ? '<img src="' + artigo.imagem + '" alt="' + artigo.titulo + '" />'
+                            : '') +
+                    '</div>' +
+                    '<div class="blog-card-conteudo">' +
+                        '<span class="blog-categoria">' + artigo.categoria + '</span>' +
+                        '<h3>' + artigo.titulo + '</h3>' +
+                        '<p>' + artigo.resumo + '</p>' +
+                        '<div class="blog-card-rodape">' +
+                            '<span class="blog-card-data">' + artigo.data + '</span>' +
+                            '<a href="artigo.html?id=' + artigo.id + '" class="btn-link">Leia mais &rarr;</a>' +
+                        '</div>' +
+                    '</div>' +
+                '</article>';
+            }).join('');
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('/components/artigos.json')
+                .then(function(r) { return r.json(); })
+                .then(function(artigos) {
+                    todosArtigos = artigos;
+                    renderArtigos(artigos);
+                })
+                .catch(function() {
+                    document.getElementById('lista-artigos').innerHTML =
+                        '<p style="grid-column:1/-1; text-align:center; color:var(--cor-texto-claro); padding:40px 0;">Erro ao carregar artigos. Tente novamente mais tarde.</p>';
+                });
+
+            // Filtros
+            document.querySelectorAll('.blog-filtro-btn').forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.blog-filtro-btn').forEach(function(b) {
+                        b.classList.remove('ativo');
+                    });
+                    this.classList.add('ativo');
+
+                    var cat = this.dataset.categoria;
+                    var filtrado = cat === 'todos'
+                        ? todosArtigos
+                        : todosArtigos.filter(function(a) { return a.categoria === cat; });
+                    renderArtigos(filtrado);
+                });
+            });
+        });
+    </script>
+
+    <!-- ===== ACCORDION FAQ ===== -->
+    <script>
+        document.querySelectorAll('.blog-faq-pergunta').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var item = this.closest('.blog-faq-item');
+                var aberto = item.classList.contains('aberto');
+
+                document.querySelectorAll('.blog-faq-item').forEach(function(i) {
+                    i.classList.remove('aberto');
+                    i.querySelector('.blog-faq-pergunta').setAttribute('aria-expanded', 'false');
+                });
+
+                if (!aberto) {
+                    item.classList.add('aberto');
+                    this.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
