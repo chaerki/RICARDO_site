@@ -63,6 +63,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 const link = document.querySelector(`.${classe}`);
                 if (link) link.classList.add('ativo');
             }
+            // Marca "Serviços" como ativo nas subpáginas do dropdown
+            const subPaginasServicos = [
+                '/pages/pe-diabetico.html',
+                '/pages/unha-encravada.html'
+            ];
+            if (subPaginasServicos.includes(currentPage)) {
+                const linkServicos = document.querySelector('.link-servicos');
+                if (linkServicos) linkServicos.classList.add('ativo');
+            }
             // Inicializa menu hambúrguer
             const menuToggle = document.getElementById('menuToggle');
             const nav = document.querySelector('nav');
