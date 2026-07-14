@@ -17,37 +17,18 @@
     <!-- Header carregado dinamicamente via script.js -->
 
     <!-- ===== HERO ===== -->
-    <section class="blog-hero">
-        <div class="container blog-hero-container">
-            <!-- Conteúdo -->
-            <div class="hero-conteudo">
+    <section class="blog-hero blog-hero--centrado">
+        <div class="container">
+            <div class="hero-conteudo" style="text-align:center; max-width:700px; margin:0 auto;">
                 <span class="hero-badge">Blog</span>
                 <h1>Saúde dos <span>Pés</span></h1>
                 <p class="hero-descricao">
                     Artigos e orientações para cuidar dos seus pés com conhecimento, prevenção e confiança.
                 </p>
-                <ul class="blog-hero-lista">
-                    <li>
-                        <i data-feather="book-open"></i>
-                        Conteúdo baseado em mais de 20 anos de experiência clínica
-                    </li>
-                    <li>
-                        <i data-feather="check-circle"></i>
-                        Temas como pé diabético, unhas, calosidades e muito mais
-                    </li>
-                    <li>
-                        <i data-feather="shield"></i>
-                        Informação confiável para decisões mais conscientes
-                    </li>
-                </ul>
-                <div class="hero-botoes">
+                <div class="hero-botoes" style="justify-content:center;">
                     <a href="#artigos" class="btn-primario">Ver artigos</a>
                     <a href="https://api.whatsapp.com/send?phone=5554999676597&text=" target="_blank" class="btn-secundario">Agendar avaliação</a>
                 </div>
-            </div>
-            <!-- Imagem -->
-            <div class="blog-hero-img">
-                <img src="/assets/imagens/blog-hero.jpg" alt="Artigos sobre saúde dos pés" />
             </div>
         </div>
     </section>
@@ -207,11 +188,6 @@
             }
             container.innerHTML = lista.map(function(artigo) {
                 return '<article class="blog-card">' +
-                    '<div class="blog-card-img">' +
-                        (artigo.imagem
-                            ? '<img src="' + artigo.imagem + '" alt="' + artigo.titulo + '" />'
-                            : '') +
-                    '</div>' +
                     '<div class="blog-card-conteudo">' +
                         '<span class="blog-categoria">' + artigo.categoria + '</span>' +
                         '<h3>' + artigo.titulo + '</h3>' +
