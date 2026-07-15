@@ -1917,7 +1917,51 @@ header.rolado {
 }
 
 /* Botão sempre alinhado na base do card */
-.serv-card .btn-primario { margin-top: auto; align-self: flex-start; }
+.serv-card .btn-primario { margin-top: 0; align-self: flex-start; }
+
+/* Link "Saiba mais" nos cards com página dedicada */
+.serv-card-saiba-mais {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    margin-bottom: 12px;
+    margin-top: auto;
+    position: relative;
+    width: fit-content;
+    transition: gap 0.25s ease, color 0.25s ease;
+}
+.serv-card-saiba-mais::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--cor-primaria);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+.serv-card-saiba-mais:hover {
+    gap: 10px;
+    color: var(--cor-secundaria);
+}
+.serv-card-saiba-mais:hover::after {
+    transform: scaleX(1);
+}
+.serv-card-saiba-mais i {
+    width: 15px;
+    height: 15px;
+    stroke: currentColor;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+}
+.serv-card-saiba-mais:hover i {
+    transform: translateX(3px);
+}
 
 /* ----- Card em destaque: Casos Complexos ----- */
 .serv-card--destaque {
